@@ -4,6 +4,8 @@
 
 This package exposes ROS 2 topics and services that allow remote control and sensor monitoring of the robot from a PC or onboard logic.
 
+![Robot](images/robot.png)
+
 ---
 
 ## 🔌 Hardware Controlled
