@@ -42,6 +42,8 @@ This package exposes ROS 2 topics and services that allow remote control and sen
 
 ## 📦 Installation
 
+First ensure ROS2 (kilted) is installed on the raspberry pi. I had to build it from source, which was non-trivial. I used a public LLM to assist me. By using the command `colcon build --symlink-install --packages-up-to demo_nodes_cpp --cmake-args -DBUILD_TESTING=OFF` you may avoid building the large packages such as gazebo and RViz. Then create a workspace like `~/ros2_ws/` where you can house the project.
+
 ```bash
 cd ~/ros2_ws/src
 git clone https://github.com/robidev/ros2_four_wheel_robot.git
@@ -63,7 +65,10 @@ ros2 run four_wheel_bot line_tracking_node
 ...
 ```
 
-Or add your own `four_wheel_bot.launch.py`.
+Or launch all services with 
+```bash
+ros2 launch four_wheel_bot all_nodes_launch
+```
 
 ---
 
